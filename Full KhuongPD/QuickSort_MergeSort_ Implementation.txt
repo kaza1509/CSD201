@@ -1,0 +1,133 @@
+51 40 72 51 86 21 51 19 97 69
+Sort(0,9)
+0<9 v
+Index  = indexPartition(0,9) =?
+I =0,j=9
+Dong 8 i<j v
+Value = 51
+J = 9 v
+J = 8 v
+J = 7  x
+I =1v 
+ I =2 x
+Doi cho a[2] va a[7]
+51 40 19 51 86 21 51 72 97 69
+J =6  x
+ I =2 v
+I = 3 v
+I =4 x 
+Doi cho a[4] cho a[6]
+51 40 19 51 51 21 86 72 97 69
+J =6 v
+J =5 x
+I =4 
+I = 5 x i<j sai vong lap while o ngoai dung
+Doi cho a[5] cho a[0]
+21 40 19 51 51 51 86 72 97 69
+ Return 5  index =5
+1-	Sort (a,0,4)
+2-	Sort (a,6,9)
+1 – sort (0,4)
+0<4 v
+21 40 19 51 51
+Index = indexPartition(a,0,4)
+Value =21
+I =0
+J =4
+I<j v
+A[4] >a[0] v 
+J =3 v
+J=2 x
+I  =0 v
+I =1 x 
+Doi cho a[1] cho a[2]
+21 19 40 51 51
+J =2 v
+J =1 j>i sai 
+Ra ngoai vong while doi cho a[0] cho a[1]
+19 21 40 51 51
+Return 1
+1-1Sort (a,0,0) dung
+1-2 sort (a,2,4)
+2<4
+40 51 51
+Index  = indexPartition(a,2,4)
+Value = 40
+I = 2, j 4
+j>i v a[j]>a[i]v j =3, j =2 >i x
+index 2
+1-2-1 sort (a,2,1) dung
+1-2-2 sort (a,3,4)
+51 51 
+Value =51 i =3, j =4
+A[j]>value x j = 4
+A[i]<=value i=4
+Doi cho a[3] cho a[4] return 4
+Sort 1-2-2-1 sort(a,3,3) dung
+Sort 1-2-2-2 sort(a,5,4) dung
+Sort 1 19 21 40 51 51
+ Sort 2: sort (a,6,9) 86 72 97 69
+Value = 86 
+I =6 j =9
+I<j v a[j]> value x j = 9
+I =6 a[6]<=value
+I = 7 v
+ I = 8 x 
+Doi cho a[8] cho a[9] 86 72 69 97
+J=8 j>i x
+Ra khoi vong while ngoai doi cho a[6] cho a[8]
+69 72 86 97
+ Return 8
+Sort 2-1 sort(a,6,7)
+Sort 2-2 sort(9,9) dung
+Sort (a,6,7) 
+Value 69
+I = 6 j =7
+A[j] >value v 
+J =6 j>i x
+Return 6
+Sort (a,6,5) dung
+Sort(a,7,7) dung
+69 72 86 97
+19 21 40 51 51 51 69 72 86 97
+
+
+
+
+87 68 9 2 72 14 86 23 52 53
+B = 0, e =10
+ M =5
+Sort 1  (0,5)
+Sort (5,10)
+1-	B = 0 ,e = 5
+M = 2
+Sort 1-1 (0,2)
+Sort 1-2 (2,5)
+
+Sort 1-1 (0,2)  68 87
+Sort 1-2 (2,5) 
+M = 3
+Sort 1-2-1 (2,3)  9
+Sort 1-2-2 (3,5) 2 72
+Merge (2,5,3)
+2 7 72
+Sort 1-2 (2,5)  2 7 72
+Merge (0,5,2)
+I =0 j =2 , e =5
+I<m,j< e v
+A[i]<a[j] x c[k] = 2, k = 1, i=0,j =3
+
+I<m,j< e v
+A[i]<a[j] x c[k] = 7, k = 2, i= 0,j =4
+I<m,j< e v
+A[i]<a[j] x c[k] = 68, k = 3, i=1, j =4
+I<m,j< e v
+A[i]<a[j] x c[k] = 72, k = 4, i=1, j =5
+I<m,j< e x
+C[k] = 87
+Sau cong doan Merge (0,5,2)
+2 7 68 72 87
+
+Sort (5,10) 14 86 23 52 53
+14 23 52 53 86
+Merge(0,10,5)
